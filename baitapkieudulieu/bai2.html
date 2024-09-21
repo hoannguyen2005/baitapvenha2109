@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="numeber" placeholder="Độ C (celsius)" id="Celsius">
+    <button onclick="change()" >change</button>
+    <p id="result"></p>
+    <script>
+     function change (){
+        let do_0c = document.getElementById("Celsius").value;
+        let do_0f = do_0c * (9/5) + 32 ;
+        document.getElementById("result").innerHTML = `result : ${do_0f.toFixed(2)}`;
+     }
+    </script>
+</body>
+</html>
+
