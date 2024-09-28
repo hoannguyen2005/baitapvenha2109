@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Bài 5: Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi cuối kỳ -->
+     <label for="">Nhập điểm kiểm tra</label>
+     <input type="number" name="" id="diem1"><br>
+     <label for=""> Nhập Điểm thi giữa kì</label>
+     <input type="number" id="diem2"><br>
+     <label for=""> Nhập điểm thi cuối kì</label>
+     <input type="number" id="diem3"><br>
+    <button onclick="Change()">kết quả</button><br>
+    <p id="result"></p>
+     <script>
+       let tong = (diem1+diem2+diem3)/3;
+       function Change(){
+        if(tong>=8 && tong<=10){
+            document.getElementById("result").innerHTML = "Học lực xuất sắc";
+        }
+        else if(tong>=7 && tong<8){
+            document.getElementById("result").innerHTML = "Học lực khá";
+        }
+        else{
+            document.getElementById("result").innerHTML = "Học lực trung bình";
+        }
+       }
+        
+     </script>
+</body>
+</html>

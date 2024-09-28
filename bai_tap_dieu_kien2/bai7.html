@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Bài 7: Giải phương trình bậc 2. -->
+     <script>
+        function giaiPTBacHai(a, b, c) {
+  if (a === 0) {
+    return giaiPTBacNhat(b, c);
+  } else {
+    let delta = b * b - 4 * a * c;
+    if (delta < 0) {
+      return "Phương trình vô nghiệm";
+    } else if (delta === 0) {
+      let x = -b / (2 * a);
+      return "Phương trình có nghiệm kép: x1 = x2 = " + x;
+    } else {
+      let x1 = (-b + Math.sqrt(delta)) / (2 * a);
+      let x2 = (-b - Math.sqrt(delta)) / (2 * a);
+      return "Phương trình có 2 nghiệm phân biệt: x1 = " + x1 + ", x2 = " + x2;
+    }
+  }
+}
+console.log(giaiPTBacHai(1, -3, 2)); // Output: Phương trình có 2 nghiệm phân biệt: x1 = 2, x2 = 1
+     </script>
+</body>
+</html>

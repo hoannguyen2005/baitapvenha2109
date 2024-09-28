@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Bài 6: Giải phương trình bậc 1. -->
+     <script>
+        function giaiPTBacNhat(a, b) {
+  if (a === 0) {
+    if (b === 0) {
+      return "Phương trình có vô số nghiệm";
+    } else {
+      return "Phương trình vô nghiệm";
+    }
+  } else {
+    let x = -b / a;
+    return "Nghiệm của phương trình là: x = " + x;
+  }
+}
+console.log(giaiPTBacNhat(2, -4)); // Output: Nghiệm của phương trình là: x = 2
+     </script>
+</body>
+</html>

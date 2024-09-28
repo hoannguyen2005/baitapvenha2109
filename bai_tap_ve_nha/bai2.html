@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Bài 2: Nhập tuổi và in ra kết quả nếu tuổi học sinh đó không đủ điều kiện vào học lớp 10.</h1>
+<label for="">Nhập tuổi :</label>
+<input type="number" placeholder="nhập số tuổi vủa bạn vào đây" id="age">
+<button onclick="checkage()">Check</button>
+<p id="result"></p>
+<script>
+    function checkage(){
+        let tuoi = document.getElementById("age").value;
+        if(tuoi < 15){
+            document.getElementById("result").innerHTML = `bạn chưa đủ điều kiện để vào học lớp 10, tuổi của bạn là ${tuoi}`;
+        }
+        else {
+            document.getElementById("result").innerHTML = "bạn đã đủ điều kiện để vào học lớp 10";
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function tinhGiaDien(soKw) {
+  let giaDien = 0;
+
+  if (soKw <= 50) {
+    giaDien = soKw * 1678;
+  } else if (soKw <= 100) {
+    giaDien = 50 * 1678 + (soKw - 50) * 1734;
+  } else if (soKw <= 200) {
+    giaDien = 50 * 1678 + 50 * 1734 + (soKw - 100) * 2014;
+  } else if (soKw <= 300) {
+    giaDien = 50 * 1678 + 50 * 1734 + 100 * 2014 + (soKw - 200) * 2536;
+  } else if (soKw <= 400) {
+    giaDien = 50 * 1678 + 50 * 1734 + 100 * 2014 + 100 * 2536 + (soKw - 300) * 2834;
+  } else {
+    giaDien = 50 * 1678 + 50 * 1734 + 100 * 2014 + 100 * 2536 + 100 * 2834 + (soKw - 400) * 2927;
+  }
+
+  return giaDien;
+}
+
+let soKw = 150;
+let giaTien = tinhGiaDien(soKw);
+console.log("Số tiền điện phải trả cho " + soKw + "kW là: " + giaTien + " đồng"); 
+    </script>
+</body>
+</html>

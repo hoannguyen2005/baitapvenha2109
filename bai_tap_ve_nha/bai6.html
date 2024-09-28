@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Bài 6: Tính hoa hồng nhận được tuỳ theo mức doanh số bán hàng -->
+     <label for="">Nhập doanh số bán hàng</label>
+     <input type="number" id="doanh_so">
+     <button onclick="ketqua()">=</button>
+     <p id="result"></p>
+     <script>
+       let hoa_hong = doanh_so
+        function ketqua(){
+            let doanh_so = document.getElementById("doanh_so").value;
+            let hoa_hong = 0;
+            if (doanh_so <= 100){
+                hoa_hong = doanh_so * 0.05;
+            }
+            else if (doanh_so>100 &&  doanh_so <= 200){
+                hoa_hong = doanh_so * 0.07;
+                
+            }
+            else if( doanh_so>200 &&doanh_so <=500){
+                hoa_hong = doanh_so * 0.1;
+                
+
+            }
+            else if  (doanh_so >  500){
+                hoa_hong = doanh_so * 0.15;
+                
+            }
+            else{
+                document.getElementById("result").innerHTML = "Doanh số không hợp lệ";
+            }
+            document.getElementById("result").innerHTML = `hoa hồng nhận được là ${hoa_hong}`;
+        }
+     </script>
+</body>
+</html>
